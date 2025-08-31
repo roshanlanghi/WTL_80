@@ -8,7 +8,7 @@ This repository contains implementations of **WEB TECHNOLOGIES LABORATORY** Assi
 
 | No. | Assignment Name | Status | Code Link |
 |-----|-----------------|--------|-----------|
-| 1   | Assignment 1    | Completed | [View Code](./Assignment1) |
+| 1   | Assignment 1    | Completed | [View Code](./Healthcareclinic_01/HealthcareClinic) |
 
 
 ---
