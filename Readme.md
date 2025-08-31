@@ -9,8 +9,8 @@ This repository contains implementations of **WEB TECHNOLOGIES LABORATORY** Assi
 | No. | Assignment Name | Status | Code Link |
 |-----|-----------------|--------|-----------|
 | 1   | Assignment 1    | Completed | [View Code](./Healthcareclinic_01/HealthcareClinic) |
-| 1   | Assignment 2    | Completed | [View Code](./todolist/todo.html) |
-
+| 2   | Assignment 2    | Completed | [View Code](./todolist/todo.html) |
+| 3   | Assignment 3    | Completed | [View Code](./FetchAPI) |
 ---
 
 ## 🛠️ Technologies Used
