@@ -1,0 +1,10 @@
+
+    .color1{
+    background-color: aqua;
+}
+.font{
+    font-family: OCR A Std, monospace;
+    text-wrap: normal;
+    text-shadow: 2px 2px 4px rgb(25, 194, 228);
+    margin-left: 10px;
+}

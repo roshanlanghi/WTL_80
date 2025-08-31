@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Example</title>
+  <style>
+    #container {
+      display: flex; /* ✅ Corrected */
+      flex-direction: row; /* Puts items vertically */
+      align-items: center; /* Optional: center content horizontally */
+    }
+
+    .box {
+      width: 200px;
+      padding: 10px;
+      margin: 10px;
+      color: white;
+    }
+
+    .red { background-color: red; }
+    .blue { background-color: blue; }
+    .gray { background-color: gray; } */
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <div class="box red">
+      <h1>Flexbox Example</h1>
+      <p>This is a simple example of a flexbox layout.</p>
+    </div>
+    <div class="box blue">
+      <h2>Flexbox Features</h2>
+      <p>Flexbox allows for responsive design and easy alignment of items.</p>
+</div>
+
+<div class="box gray">
+  <h2>Flexbox Benefits</h2>
+  <p>Using Flexbox can greatly improve the layout structure and responsiveness of your web applications.</p>
+</div>
+ 
+
+</body>
+</html>
