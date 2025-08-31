@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <style>
+    .completed {
+      text-decoration: line-through;
+      background-color: #d4edda !important;
+    }
+    .color {
+      background-color: rgb(46, 32, 53);
+    }
+    .hov:hover {
+      color: rgb(70, 8, 253);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="color" style="font-family: New Century Schoolbook, TeX Gyre Schola, serif;">
+
+  <div class="container py-4">
+    <h1 class="text-center mb-3 text-white font-weight-bold">📝 TO-DO LIST</h1>
+
+    <!-- Input -->
+    <div class="row g-2 justify-content-center mb-4" id="inputRow">
+      <div class="col-12 col-md-8">
+        <input type="text" id="task" class="form-control" placeholder="Enter your task here">
+      </div>
+      <div class="col-12 col-md-2">
+        <button id="add" class="btn btn-success w-100">Add Task</button>
+      </div>
+    </div>
+
+    <!-- Tasks Table -->
+    <div class="table-responsive" id="allTasksTable">
+      <table class="table table-striped table-bordered text-center">
+        <thead class="table-success">
+          <tr>
+            <th>#</th>
+            <th>Task</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <!-- All tasks -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const taskInput = document.getElementById("task");
+    const tbody = document.getElementById("tbody");
+
+    document.getElementById("add").addEventListener("click", function () { 
+      const task = taskInput.value.trim();
+      if (task === "") return;
+
+      const row = document.createElement("tr");
+
+      const cellCount = document.createElement("td");
+      const cellTask = document.createElement("td");
+      const cellActions = document.createElement("td");
+
+      cellCount.textContent = tbody.children.length + 1;
+      cellTask.textContent = task;
+
+      // Complete button
+      const completeBtn = document.createElement("button");
+      completeBtn.textContent = "Complete";
+      completeBtn.className = "btn btn-success btn-sm me-2";
+      completeBtn.addEventListener("click", function () {
+        row.classList.toggle("completed");
+        completeBtn.disabled = true;
+      });
+
+      // Delete button
+      const delBtn = document.createElement("button");
+      delBtn.textContent = "Delete";
+      delBtn.className = "btn btn-danger btn-sm";
+      delBtn.addEventListener("click", function () {
+        tbody.removeChild(row);
+        updateTaskNumbers();
+      });
+
+      cellActions.appendChild(completeBtn);
+      cellActions.appendChild(delBtn);
+      row.appendChild(cellCount);
+      row.appendChild(cellTask);
+      row.appendChild(cellActions);
+      tbody.appendChild(row);
+       document.getElementById("task").value = "";
+    
+       
+    });
+
+    function updateTaskNumbers() {
+      const rows = tbody.querySelectorAll("tr");
+      rows.forEach((tr, index) => {
+        tr.children[0].textContent = index + 1;
+      });
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
