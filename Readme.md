@@ -11,6 +11,7 @@ This repository contains implementations of **WEB TECHNOLOGIES LABORATORY** Assi
 | 1   | Assignment 1    | Completed | [View Code](./Healthcareclinic_01/HealthcareClinic) |
 | 2   | Assignment 2    | Completed | [View Code](./todolist/todo.html) |
 | 3   | Assignment 3    | Completed | [View Code](./FetchAPI) |
+| 4    | Assignment 4    | Completed | [View Code](./CRUD_OP_PHP) |
 ---
 
 ## 🛠️ Technologies Used
